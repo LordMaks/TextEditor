@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="SaveAss" Content="Save as" Margin="33,25,486,352"  IsEnabled="{Binding Path=SaveAssIsEnabled}" Click="SaveAss_Click"/>
+        <Button x:Name="Save" Content="Save" Margin="33,97,486,280" IsEnabled="{Binding Path=SaveIsEnabled}" Click="Save_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="379" Margin="350,0,0,0" AcceptsReturn="True" AcceptsTab="True" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" Text="{Binding TextBox}" VerticalAlignment="Center" Width="430" MinLines="1" MaxLines="9999999" RenderTransformOrigin="0.5,0.5" TextChanged="textBox_TextChanged" TextInput="textBox_TextInput">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label x:Name="label" Content="{Binding Dbug}" HorizontalAlignment="Left" Height="34" Margin="60,373,0,0" VerticalAlignment="Top" Width="219"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="7" Margin="10,417,0,0" VerticalAlignment="Top" Width="39" Click="button_Click_1"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="25" Margin="33,217,0,0" TextWrapping="Wrap" Text="{Binding Path}" VerticalAlignment="Top" Width="296"/>
+        <Button x:Name="button1" Content="Open" HorizontalAlignment="Left" Height="28" Margin="33,247,0,0" VerticalAlignment="Top" Width="90" Click="button1_Click"/>
+
+    </Grid>
+</Window>
